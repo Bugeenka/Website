@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bugeenka</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" type="image/png" href="images/centicon.png">
+
+</head>
+<body class="buhg-landing">
+        <img src="images/buhg.png" alt="Buhg" id="hidden-button" onclick="playAudioFile()">
+
+        <div id="hidden">
+            <audio id="bgm" preload="auto" loop>
+        <source src="Audio/xbox.mp3" type="audio/mpeg" />
+                Your browser is inferior
+        </audio>
+        </div>  
+
+        <script>
+  function playAudioFile() {
+    let audio = document.getElementById("bgm");
+        audio.play();
+        audio.volume = 0.5;
+        audio.loop = true;
+        audio.muted = false;
+  }
+</script>
+
+</body>
+</html>
