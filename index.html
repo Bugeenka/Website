@@ -12,14 +12,29 @@
 <body>
         <img id ="buhg-landing" src="https://i.postimg.cc/LsbRZrFb/buhg.png" alt="Buhg" onclick="playAudioFile()">
 
-        <div id="hidden">
+        <div class="hidden">
             <audio id="bgm" preload="auto" loop>
         <source src="Audio/ambience.wav" type="audio/wav" />
                 Your browser is inferior
         </audio>
         </div>  
+         <div class="hidden">
+            <audio id="alarm" preload="auto" loop>
+        <source src="Audio/alert.ogg" type="audio/ogg" />
+                NOT BUHG
+        </audio>
+        </div> 
+
 
         <script>
+function playAlarm() {
+    let alarm = document.getElementById("alarm")
+        audio.play();
+        audio.volume = 0.5;
+        audio.muted = false;
+}
+</script>
+<script>
   function playAudioFile() {
     let audio = document.getElementById("bgm");
         audio.play();
@@ -29,7 +44,8 @@
         let buhg = prompt("Buhg?", "");
             let text;
                 if (buhg != "y" && buhg != "yes" && buhg != "buhg") {
-                    alert("NOT BUHG")
+                    playAlarm();
+                    alert("NOT BUHG");
                     window.close();
                 } else {
                     alert("Proceed");
