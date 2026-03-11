@@ -87,3 +87,7 @@ html, body {
 .navbar a:active {
     color: white;
 }
+
+#errorcode {
+    object-fit: cover;
+}
