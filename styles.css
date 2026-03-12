@@ -1,14 +1,18 @@
-html, body {
+ body {
     height:auto;
     background-color: #000000;
+    margin: 10% auto;
     padding-left: 20%;
-    padding-top: 10%;
+    padding-right: 20%;
+    padding-top: 5%;
+    color:#b3ff00;
+    align-items: center;
 }
 
 #buhg-landing {
     background-color: #000000;
     font-family: 'Arial', sans-serif ;
-    color: #000000 ;
+    color:#b3ff00;
     padding: 5% ;
     display: flex ;
     justify-content: center ;
@@ -27,29 +31,29 @@ html, body {
     display: none ;
 }
 
-#hub
+.hub
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: auto;
+    background-size: 100vh;
     background-color: #000000;
-    margin: 0;
-    padding: 0;
-    max-width: 50%;
-    
+    background-image: url("Images/251.PNG");
+    background-repeat: repeat;
+    background-origin: inherit;
     
 }
 
 .header
 {
+    background-color: rgba(0,0,0,.75);
     text-align: center;
-    font-size: x-large;
+    font-size: xx-large;
     color: #b3ff00;
     border: #bbff00;
-    border-radius: 6px;
+    border-radius: 0px;
     border-width: 3px;
     border-style: outset;
     margin: 0 auto;
+    margin: 10px;
     
 }
 
@@ -59,6 +63,7 @@ html, body {
     margin: 0 auto;
     padding: 50px;
     background-color: #000000;
+    opacity: 50%;
     border: #b3ff00;
     
 }
@@ -91,3 +96,44 @@ html, body {
 #errorcode {
     object-fit: cover;
 }
+
+.welcome-box {
+
+    color: #b3ff00;
+    background-color: rgba(0,0,0,.75);
+    opacity: 100%;
+    display: flex;
+    justify-content: center;
+    border: #b3ff00;
+    border-width: 4px;
+    padding: 10px;
+    margin-top: 4px;
+    border-color: #b3ff00 ;
+    border-style: outset;
+}
+
+body.hub{
+    background-color: rgba(0,0,0,.75);
+    opacity: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    
+}
+
+.content {
+    color: #b3ff00;
+    background-color: rgba(0,0,0,.75);
+    opacity: 100%;
+    display: flex;
+    justify-content: center;
+    border: #b3ff00;
+    border-width: 4px;
+    padding: 10px;
+    margin-top: 4px;
+    border-color: #b3ff00 ;
+    border-style: outset;
+    min-width: 90vh;
+}
+
