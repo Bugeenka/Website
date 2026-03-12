@@ -135,5 +135,6 @@ body.hub{
     border-color: #b3ff00 ;
     border-style: outset;
     min-width: 90vh;
+    flex-direction: column;
 }
 
