@@ -9,20 +9,27 @@
     <link rel="icon" type="image/png" href="https://i.postimg.cc/xCNQGt9p/centicon.png">
 
 </head>
+
 <body class="hub">
 
+<audio id="uiHoverSound" src="Audio/Bleep_05.ogg"></audio>
+<audio id="uiClickSound" src="Audio/Confirm_07.ogg"></audio>
+
         <div class="header">
-            Bug Hub
+            <img src="Images/BugZone.png">
         </div>
             
    
         <div class="navbar">
-            <a href="faq.html">FAQ</a>
-            <a href="keyboard.html">Keyboard</a>
-            <a href="art.html">Art</a>
-            <a href="projects.html">Projects</a>
-            <a href="https://www.youtube.com/@bugeenka">Youtube</a>
-            <a href="https://watch.bugeenka.com">Twitch</a>
+
+            
+
+            <button class="nav-button"><a href="faq.html">FAQ</a></button>
+            <button class="nav-button"><a href="keyboard.html">Keyboard</a></button>
+            <button class="nav-button"><a href="art.html">Art</a></button>
+            <button class="nav-button"><a href="projects.html">Projects</a></button>
+            <button class="nav-button"><a href="https://www.youtube.com/@bugeenka">Youtube</a></button>
+            <button class="nav-button"><a href="https://watch.bugeenka.com">Twitch</a></button>
         </div>
     <div class="welcome-box">
         
@@ -39,5 +46,51 @@
 
     </div>
 </table>
+
+<script>
+var audio = document.getElementById("uiHoverSound");
+var audio2 = document.getElementById("uiClickSound");
+var unlocked = false;
+
+
+//activates audio on page click
+document.addEventListener("click", function() {
+  if (!unlocked) {
+    audio.play().then(() => {
+      audio.pause();
+      audio.currentTime = 0;
+      unlocked = true;
+    });
+  }
+}, { once: true });
+
+// hover sfx
+document.querySelectorAll(".nav-button").forEach(function(button) {
+  button.addEventListener("mouseenter", function() {
+    if (unlocked) {
+      var sfx = audio.cloneNode();
+      sfx.volume = 0.5;
+      sfx.play();
+    }
+  });
+
+//click sfx
+button.addEventListener("click", function(event) {
+  event.preventDefault();
+  var link = button.querySelector("a");
+  if (unlocked) {
+    var sfx2 = audio2.cloneNode();
+    sfx2.volume = 0.5;
+    sfx2.play();
+    sfx2.addEventListener("ended", function() {
+      window.location.href = link.href;
+    });
+  } else {
+    window.location.href = link.href; 
+  }
+});
+});
+
+</script>
 </body>
 </html>

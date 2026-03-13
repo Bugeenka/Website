@@ -1,3 +1,5 @@
+ @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+ 
  body {
     height:auto;
     background-color: #000000;
@@ -34,26 +36,30 @@
 .hub
 {
     height: auto;
-    background-size: 100vh;
+    background-size: 200vh;
     background-color: #000000;
-    background-image: url("Images/251.PNG");
-    background-repeat: repeat;
+    background-image: url("Images/Website-BG.webp");
+    background-repeat: no-repeat;
     background-origin: inherit;
+    background-attachment: fixed;
     
 }
 
 .header
 {
-    background-color: rgba(0,0,0,.75);
+   /* background-color: rgba(0,0,0,.75); */
     text-align: center;
-    font-size: xx-large;
+    font-size:20vh;
     color: #b3ff00;
-    border: #bbff00;
+    /* border: #bbff00; */
     border-radius: 0px;
-    border-width: 3px;
-    border-style: outset;
+    /* border-width: 3px; */
+    /* border-style: outset; */
     margin: 0 auto;
     margin: 10px;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
     
 }
 
@@ -138,3 +144,15 @@ body.hub{
     flex-direction: column;
 }
 
+.nav-button {
+    background-color: #000000;
+    border-style: outset;
+    border-radius: 10% ;
+    border-color: #b3ff00;
+    box-shadow: 0 0 0 12px transparent;
+}
+
+.nav-button:hover {
+    border-width: 3px;
+    
+}
