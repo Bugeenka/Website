@@ -129,6 +129,7 @@ body.hub{
 }
 
 .content {
+    text-align: center;
     color: #b3ff00;
     background-color: rgba(0,0,0,.75);
     opacity: 100%;
@@ -155,4 +156,9 @@ body.hub{
 .nav-button:hover {
     border-width: 3px;
     
+}
+
+.hidden-text {
+    color: #000000;
+    display: auto;    
 }

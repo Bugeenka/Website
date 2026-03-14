@@ -10,7 +10,7 @@
 
 </head>
 <body>
-        <img id ="buhg-landing" src="https://i.postimg.cc/LsbRZrFb/buhg.png" alt="Buhg" onclick="playAudioFile()">
+        <img id ="buhg-landing" src="Images/Riddle.png" alt="Buhg" onclick="playAudioFile()">
 
         <div class="hidden">
             <audio id="bgm" preload="auto" loop>
@@ -21,10 +21,12 @@
          <div class="hidden">
             <audio id="alarm" preload="auto" loop>
         <source src="Audio/alarm.ogg" type="audio/ogg" />
-                NOT BUHG
+                WRONG
         </audio>
         </div> 
-
+<div class="hidden-text">
+    chilopoda
+</div>
 
 <script>
 function playAlarm() {
@@ -48,11 +50,11 @@ function closeCurrentTab() {
         audio.volume = 0.5;
         audio.loop = true;
         audio.muted = false;
-        let buhg = prompt("Buhg?", "");
+        let buhg = prompt("Code:", "");
             let text;
-                if (buhg != "y" && buhg != "yes" && buhg != "buhg") {
+                if (buhg != "chilopoda") {
                     playAlarm();
-                    alert("NOT BUHG");
+                    alert("WRONG");
                     closeCurrentTab();
                 } else {
                     alert("Proceed");
