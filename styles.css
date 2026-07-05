@@ -1,5 +1,6 @@
  @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
  body {
     height:auto;
@@ -124,8 +125,10 @@ body.hub{
     
 }
 
-.content {
+.home-content {
+    font-family: "Sansation", sans-serif;
     text-align: center;
+    font-size: 18px;
     color: #b3ff00;
     background-color: rgba(0,0,0,.75);
     opacity: 100%;
@@ -137,8 +140,8 @@ body.hub{
     margin-top: 4px;
     border-color: #b3ff00 ;
     border-style: outset;
-    min-width: 90vh;
     flex-direction: column;
+    width: 70%;
 }
 
 
@@ -198,17 +201,6 @@ body.hub{
     text-align: left;
 }
 
-#twitch-embed {
-    display:flex;
-    position: fixed;
-    right: 0;
-    padding-right: 1%;
-    padding-top: 30%;
-    border-color: #000000;
-    border-style: hidden;
-
-
-}
 
 .twitch-button {
   align-content: center;
@@ -246,5 +238,30 @@ body.hub{
 .twitch-button-container {
     align-content: center;
     text-align: center;
-    padding-bottom: 5%;
+    padding-bottom: 0;
+}
+
+.twitch-container {
+    border-style: inset;
+    border-color: #d4f30f;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+    height: auto;
+    width: auto;
+}
+
+.watch-page {
+    margin: 0%;
+    padding: 0%;
+    width: auto;
+    height: auto;
+
+}
+
+.twitch-embed-big {
+
+    height: auto;
+    width: fit-content;
+    margin: 0%;
 }

@@ -4,8 +4,21 @@
         <title>Watch Live!</title>
         <link rel="stylesheet" href="/styles.css">
     </head>
-  <body>
-
+  <body class="watch-page">
+    <div class="navbar">           
+    <div>
+        <a class="nav-button" href="index.html">Home</a>
+        <a class="nav-button" href="faq.html">FAQ</a>
+        <a class="nav-button" href="keyboard.html">Keyboard</a>
+        <a class="nav-button" href="art.html">Art</a>
+        <a class="nav-button" href="projects.html">Projects</a>
+    </div>
+    <div class="navbar" id="sub-nav">
+        <a class="nav-button" href="https://bugeenka.itch.io/">Itch.io</a>
+        <a class="nav-button" href="https://www.youtube.com/@bugeenka">Youtube</a>
+    </div>
+</div>
+<div class="twitch-container">
 <div class="twitch-button-container">
     <a class="twitch-button" href="https://twitch.tv/bugeenka">Watch on Twitch</a>
 </div>
@@ -16,11 +29,12 @@
 
     <script type="text/javascript">
       new Twitch.Embed("twitch-embed-big", {
-        width: 1200,
-        height: 600,
+        width: 1680,
+        height: 800,
         channel: "bugeenka",
         parent: ["watch.bugeenka.com", "bugeenka.com"]
       });
     </script>
+    </div>
   </body>
 </html>
