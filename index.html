@@ -1,67 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="hub" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bugeenka</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Bug Hub</title>
+    <link rel="stylesheet" href="/styles.css">
 
     <link rel="icon" type="image/png" href="https://i.postimg.cc/xCNQGt9p/centicon.png">
 
 </head>
-<body>
-        <img id ="buhg-landing" src="Images/Riddle.png" alt="Buhg" onclick="playAudioFile()">
 
-        <div class="hidden">
-            <audio id="bgm" preload="auto" loop>
-        <source src="Audio/ambience.wav" type="audio/wav" />
-                Your browser is inferior
-        </audio>
-        </div>  
-         <div class="hidden">
-            <audio id="alarm" preload="auto" loop>
-        <source src="Audio/alarm.ogg" type="audio/ogg" />
-                WRONG
-        </audio>
-        </div> 
-<div class="hidden-text">
-    chilopoda
-</div>
+<body class="hub">
+
+<audio id="uiHoverSound" src="Audio/Bleep_05.ogg"></audio>
+<audio id="uiClickSound" src="Audio/Confirm_07.ogg"></audio>
+
+        <div class="header">
+            <img src="Images/BugZone.png">
+        </div>
+            
+   
+        <div class="navbar">
+
+            
+
+            <button class="nav-button"><a href="faq.html">FAQ</a></button>
+            <button class="nav-button"><a href="keyboard.html">Keyboard</a></button>
+            <button class="nav-button"><a href="art.html">Art</a></button>
+            <button class="nav-button"><a href="projects.html">Projects</a></button>
+            <button class="nav-button"><a href="https://www.youtube.com/@bugeenka">Youtube</a></button>
+            <button class="nav-button"><a href="https://watch.bugeenka.com">Twitch</a></button>
+        </div>
+
+        <div class="navbar" id="sub-nav">
+            <button class="nav-button"><a href="https://bugeenka.itch.io/">Itch.io</a></button>
+        </div>
+    <div class="welcome-box">
+        
+            <h2 class="welcome-text">Welcome to the bug zone!</h2>
+        
+    </div>
+    <div class="content">
+        <p>
+            Howdy! My name is Bugeenka.<br>
+            I am a digital creator and content creator.<br>
+            This is a central hub for all of my pages and to show off my interests. 
+            
+
+            
+        </p>
+        <!-- <img src="Images/ERROR_CAT.png"> -->
+    </div>
+
+    </div>
+</table>
 
 <script>
-function playAlarm() {
-    let alarm = document.getElementById("alarm")
-        alarm.play();
-        alarm.volume = 0.5;
-        alarm.muted = false;
-}
+var audio = document.getElementById("uiHoverSound");
+var audio2 = document.getElementById("uiClickSound");
+var unlocked = false;
 
 
-
-function closeCurrentTab() {
-    window.open('', '_self', '');
-    window.close();
-}
-
-
-  function playAudioFile() {
-    let audio = document.getElementById("bgm");
-        audio.play();
-        audio.volume = 0.5;
-        audio.loop = true;
-        audio.muted = false;
-        let buhg = prompt("Code:", "");
-            let text;
-                if (buhg != "chilopoda") {
-                    playAlarm();
-                    alert("WRONG");
-                    closeCurrentTab();
-                } else {
-                    alert("Proceed");
-                    window.location.replace("/hub.html");
-} 
+//activates audio on page click
+document.addEventListener("click", function() {
+  if (!unlocked) {
+    audio.play().then(() => {
+      audio.pause();
+      audio.currentTime = 0;
+      unlocked = true;
+    });
   }
-</script>
+}, { once: true });
 
+// hover sfx
+document.querySelectorAll(".nav-button").forEach(function(button) {
+  button.addEventListener("mouseenter", function() {
+    if (unlocked) {
+      var sfx = audio.cloneNode();
+      sfx.volume = 0.5;
+      sfx.play();
+    }
+  });
+
+//click sfx
+button.addEventListener("click", function(event) {
+  event.preventDefault();
+  var link = button.querySelector("a");
+  if (unlocked) {
+    var sfx2 = audio2.cloneNode();
+    sfx2.volume = 0.5;
+    sfx2.play();
+    sfx2.addEventListener("ended", function() {
+      window.location.href = link.href;
+    });
+  } else {
+    window.location.href = link.href; 
+  }
+});
+});
+
+</script>
 </body>
 </html>
