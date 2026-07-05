@@ -186,9 +186,47 @@ body.hub{
     right: 0;
     padding-right: 1%;
     padding-top: 30%;
-    height: 400;
-    width: 200;
     border-color: #000000;
     border-style: hidden;
 
+
+}
+
+.twitch-button {
+  align-content: center;
+  color: #b3ff00;
+  position: sticky;
+  border: none;
+  font-size: 32px;
+  padding: 8px 16px;
+  text-decoration: none;
+  box-shadow: 0 0 0 2px #000000;
+  background-color: #000000;
+  border-radius: 2px;
+  border-color: #7800e1;
+  border-style: inset;
+  padding: 12px;
+  text-align: center;
+}
+
+.twitch-button:hover {
+    transform: scale(2);
+    box-shadow: 0 0 0 5px #d4f30f;
+    color: #b700ff;
+    background-color: #d4f30f;
+}
+
+.twitch-button:active {
+  scale: 0.95;
+  color: #d4f30f;
+}
+
+.twitch-button:visited {
+     color: #b3ff00;
+}
+
+.twitch-button-container {
+    align-content: center;
+    text-align: center;
+    padding-bottom: 5%;
 }

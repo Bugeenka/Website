@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Watch Live!</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+  <body>
+
+<div class="twitch-button-container">
+    <a class="twitch-button" href="https://twitch.tv/bugeenka">Watch on Twitch</a>
+</div>
+
+    <div id="twitch-embed-big"></div>
+
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed-big", {
+        width: 1200,
+        height: 600,
+        channel: "bugeenka",
+        parent: ["watch.bugeenka.com", "bugeenka.com"]
+      });
+    </script>
+  </body>
+</html>
