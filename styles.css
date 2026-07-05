@@ -169,3 +169,13 @@ body.hub{
   scale: 0.95;
   color: #d4f30f;
 }
+
+
+.faq {
+    border-style: inset;
+    border-color: #7800e1;
+    border-radius: 2px;
+    padding: 10px;
+    align-items: center;
+    text-align: left;
+}
