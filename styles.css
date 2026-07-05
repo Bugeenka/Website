@@ -179,3 +179,16 @@ body.hub{
     align-items: center;
     text-align: left;
 }
+
+#twitch-embed {
+    display:flex;
+    position: fixed;
+    right: 0;
+    padding-right: 1%;
+    padding-top: 30%;
+    height: 400;
+    width: 200;
+    border-color: #000000;
+    border-style: hidden;
+
+}
