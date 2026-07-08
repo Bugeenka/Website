@@ -23,11 +23,9 @@
 <div class="navbar">           
     <div>
         <a class="nav-button" href="faq.html">FAQ</a>
-        <a class="nav-button" href="keyboard.html">Keyboard</a>
-        <a class="nav-button" href="art.html">Art</a>
+   <!--     <a class="nav-button" href="keyboard.html">Keyboard</a> -->
+       <!-- <a class="nav-button" href="art.html">Art</a> -->
         <a class="nav-button" href="projects.html">Projects</a>
-    </div>
-    <div class="navbar" id="sub-nav">
         <a class="nav-button" href="https://bugeenka.itch.io/">Itch.io</a>
         <a class="nav-button" href="https://www.youtube.com/@bugeenka">Youtube</a>
         <a class="nav-button" href="watch.html">Twitch</a>
@@ -40,6 +38,7 @@
 
   
     <div class="home-content">
+        <div class="welcome-box">
         <p>
             Howdy! My name is Bugeenka.<br>
             I am a digital creator and content creator.<br>
@@ -48,9 +47,34 @@
 
             
         </p>
+        </div>
         <!-- <img src="Images/ERROR_CAT.png"> -->
-    </div>
+    
 
+
+    <div class ="bsky-feed">
+          <bsky-embed
+    username="bugeenka.com"
+    mode="dark"
+    limit="3"
+    link-target="_blank"
+    link-image="true"
+    load-more="true"
+    disable-styles="false"
+    custom-styles=".border-slate-300 { border-color: purple; }"
+    date-format='{"type":"absolute","locale":"en-US,"options":{"weekday":"long","year":"numeric","month":"long","day":"numeric"}}'
+    disable-images="false"
+    disable-videos="true"
+    disable-autoplay="true"
+  >
+  </bsky-embed>
+
+    </div>
+    <div class="news">
+        <h3>
+            NEWS
+        </h3>
+    </div>
     </div>
 </table>
 
@@ -81,5 +105,7 @@ button.addEventListener("click", function(event) {
 });
 
 </script>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
 </body>
 </html>

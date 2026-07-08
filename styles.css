@@ -103,16 +103,19 @@
 .welcome-box {
 
     color: #b3ff00;
-    background-color: rgba(0,0,0,.75);
-    opacity: 100%;
+    background-color: #260047d5;
     display: flex;
     justify-content: center;
     border: #b3ff00;
     border-width: 4px;
     padding: 10px;
     margin-top: 4px;
+    margin-left: 10%;
+    margin-right: 10%;
     border-color: #b3ff00 ;
-    border-style: outset;
+    border-style: inset;
+    max-width: 75%;
+    text-align: center;
 }
 
 body.hub{
@@ -130,16 +133,13 @@ body.hub{
     text-align: center;
     font-size: 18px;
     color: #b3ff00;
-    background-color: rgba(0,0,0,.75);
-    opacity: 100%;
     display: flex;
     justify-content: center;
     border: #b3ff00;
     border-width: 4px;
     padding: 10px;
     margin-top: 4px;
-    border-color: #b3ff00 ;
-    border-style: outset;
+    border-color: #000000 ;
     flex-direction: column;
     width: 70%;
 }
@@ -264,4 +264,26 @@ body.hub{
     height: auto;
     width: fit-content;
     margin: 0%;
+}
+
+.bsky-feed {
+
+    border-style: inset;
+    border-color: #b3ff00;
+    margin-top: 1%;
+    background-color: #260047d5;
+    text-align: left;
+    size: 75%;
+
+
+.news {
+
+    border-style: inset;
+    border-color: #b3ff00;
+    margin-top: 1%;
+    background-color: #260047d5;
+    text-align: right;
+    justify-content: right;
+    
+}
 }
